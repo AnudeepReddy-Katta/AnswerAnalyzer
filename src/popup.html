@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnswerAnalyzer</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .header img {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+    
+    .question-section {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    
+    #questionText {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    #questionCounter {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    
+    .options-section {
+      margin-top: 10px;
+    }
+    
+    #optionsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .option-item {
+      padding: 10px;
+      margin: 5px 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .option-item:hover {
+      background: #f0f0f0;
+    }
+    
+    .option-item.selected {
+      background: #e3f2fd;
+      border-color: #2196f3;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    #analyzeBtn {
+      background: #2196f3;
+      color: white;
+      flex: 1;
+    }
+    
+    #analyzeBtn:hover:not(:disabled) {
+      background: #1976d2;
+    }
+    
+    #prevBtn, #nextBtn {
+      background: #f5f5f5;
+      color: #333;
+    }
+    
+    #prevBtn:hover:not(:disabled), #nextBtn:hover:not(:disabled) {
+      background: #e0e0e0;
+    }
+    
+    .loading {
+      display: none;
+      text-align: center;
+      margin: 10px 0;
+    }
+    
+    .loading.active {
+      display: block;
+    }
+    
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #f3f3f3;
+      border-top: 2px solid #2196f3;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    #answerSection {
+      margin-top: 15px;
+      padding: 15px;
+      background: #e8f5e9;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    #answerSection.visible {
+      display: block;
+    }
+    
+    #answerText {
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="../icons/icon48.png" alt="AnswerAnalyzer">
+      <h1>AnswerAnalyzer</h1>
+    </div>
+    
+    <div class="question-section">
+      <div id="questionCounter"></div>
+      <div id="questionText"></div>
+      
+      <div class="options-section">
+        <ul id="optionsList"></ul>
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button id="prevBtn">Previous</button>
+      <button id="analyzeBtn">Analyze Answer</button>
+      <button id="nextBtn">Next</button>
+    </div>
+    
+    <div class="loading" id="loading"></div>
+    
+    <div id="answerSection">
+      <div id="answerText"></div>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html> 

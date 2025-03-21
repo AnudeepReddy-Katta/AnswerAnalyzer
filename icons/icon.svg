@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="64" cy="64" r="60" fill="#4285F4"/>
+    
+    <!-- Book Shape -->
+    <path d="M40 40 L88 40 L88 88 L40 88 Z" 
+          fill="white" 
+          stroke="white" 
+          stroke-width="2"/>
+    
+    <!-- Book Pages -->
+    <path d="M45 45 L83 45 L83 83 L45 83 Z" 
+          fill="#F8F9FA" 
+          stroke="#4285F4" 
+          stroke-width="1"/>
+    
+    <!-- Question Mark -->
+    <text x="64" 
+          y="70" 
+          font-family="Arial, sans-serif" 
+          font-size="40" 
+          font-weight="bold" 
+          fill="#4285F4" 
+          text-anchor="middle">?</text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="45" cy="45" r="3" fill="#4285F4"/>
+    <circle cx="83" cy="45" r="3" fill="#4285F4"/>
+</svg> 
