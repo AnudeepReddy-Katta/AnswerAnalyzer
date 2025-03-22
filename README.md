@@ -14,7 +14,7 @@ AnswerAnalyzer is a Chrome extension that helps you understand the reasoning beh
 ## Installation
 
 ### Method 1: Install from GitHub (Recommended)
-1. Download the latest release from the [Releases page](https://github.com/YOUR_USERNAME/AnswerAnalyzer/releases)
+1. Download the latest release from the [Releases page](https://github.com/AnudeepReddy-Katta/AnswerAnalyzer/releases)
 2. Extract the ZIP file
 3. Open Chrome and go to `chrome://extensions/`
 4. Enable "Developer mode" in the top right
@@ -25,7 +25,7 @@ AnswerAnalyzer is a Chrome extension that helps you understand the reasoning beh
 ### Method 2: Clone from GitHub
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/AnswerAnalyzer.git
+   git clone https://github.com/AnudeepReddy-Katta/AnswerAnalyzer.git
    ```
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
